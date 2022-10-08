@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import React, {useState} from 'react'
 
 
@@ -33,13 +34,13 @@ function createForm() {
             <fieldset>
                 <legend>Post</legend>
                 <p> <input type="text" name="title" onChange={handleChange} placeholder="Post Title" size={40}/> </p>
-                <p> <textarea cols={50} rows={10} name="content" onChange={handleChange}>Post content</textarea> </p>
+                <p> <textarea cols={50} rows={10} name="content" onChange={handleChange}></textarea> </p>
 
                 <button type="submit">Create</button>
             </fieldset>
             
         </form>
-    
+        <button onClick = {() => Router.push("/")}>View Post</button>
     </>
   )
 }
